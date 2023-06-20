@@ -1,9 +1,0 @@
-[
-  {
-    "info": "Api de prueba",
-    "usuarios": [
-      { "nombre": "Lautaro", "password": 123 },
-      { "nombre": "Lautaro", "password": 123 }
-    ]
-  }
-]
