@@ -39,8 +39,10 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 const { Category, Product } = sequelize.models;
 // Aca vendrian las relaciones
+Category.belongsToMany(Product, { through: "Category-Product-Cross" });
+
 
 module.exports = {
-  ...sequelize.models, // para poder importar los modelos así: const { Product, Category } = require('./db.js');
+  ...sequelize.models, // para poder importar los modelos en otros archivos seria  así: const { Product, Category } = require('./db.js');
   sequelize: sequelize, // para importart la conexión { sequelize } = require('./db.js');
 };
