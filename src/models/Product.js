@@ -1,14 +1,14 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
-
 module.exports = (sequelize) => {
   sequelize.define("Product", {
     title: {
       type: DataTypes.STRING,
-      defaultValue: "No tiene nombre",
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
+      defaultValue:"No hay descripcion"
     },
     price: {
       type: DataTypes.REAL,
